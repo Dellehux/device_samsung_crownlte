@@ -27,13 +27,16 @@ $(call inherit-product, device/samsung/crownlte/device.mk)
 # Boot Animation
 TARGET_SCREEN_HEIGHT := 2960
 TARGET_SCREEN_WIDTH := 1440
-TARGET_BOOT_ANIMATION_RES := 1440
 
 ## Inherit some common AOSP stuff
-$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
+$(call inherit-product, vendor/derp/config/common_full_phone.mk)
+DERP_RELEASE := true
+TARGET_BOOT_ANIMATION_RES := 1080
+USE_LEGACY_BOOTANIMATION := true
+DERP_BUILDTYPE := Official
 
 ## Device identifier, this must come after all inclusions
-PRODUCT_NAME := aosp_crownlte
+PRODUCT_NAME := derp_crownlte
 PRODUCT_DEVICE := crownlte
 PRODUCT_BRAND := samsung
 PRODUCT_MODEL := SM-N960F
