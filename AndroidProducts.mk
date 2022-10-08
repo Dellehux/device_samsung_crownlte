@@ -15,9 +15,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/aosp_crownlte.mk
+    $(LOCAL_DIR)/proton_crownlte.mk
 
 COMMON_LUNCH_CHOICES := \
-    aosp_crownlte-eng \
-    aosp_crownlte-user \
-    aosp_crownlte-userdebug
+    proton_crownlte-eng \
+    proton_crownlte-user \
+    proton_crownlte-userdebug
