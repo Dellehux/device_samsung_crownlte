@@ -29,11 +29,24 @@ TARGET_SCREEN_HEIGHT := 2960
 TARGET_SCREEN_WIDTH := 1440
 TARGET_BOOT_ANIMATION_RES := 1440
 
-## Inherit some common AOSP stuff
-$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
+# Inherit some common AncientRoms stuff
+ANCIENT_OFFICIAL ?= true
+ANCIENT_GAPPS ?= true
+$(call inherit-product, vendor/ancient/config/common_full_phone.mk)
+
+# Inherit some common Pixel stuff
+TARGET_INCLUDE_PIXEL_CHARGER := true
+FORCE_NEXUSLAUNCHER := false
+PIXEL_STUFF := true
+TARGET_SUPPORTS_QUICK_TAP := true
+TARGET_SUPPORTS_GOOGLE_RECORDER := false
+TARGET_INCLUDE_LIVE_WALLPAPERS := false
+
+# Face Unlock
+TARGET_FACE_UNLOCK_SUPPORTED := true
 
 ## Device identifier, this must come after all inclusions
-PRODUCT_NAME := aosp_crownlte
+PRODUCT_NAME := ancient_crownlte
 PRODUCT_DEVICE := crownlte
 PRODUCT_BRAND := samsung
 PRODUCT_MODEL := SM-N960F
